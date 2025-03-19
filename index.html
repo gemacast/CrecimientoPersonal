@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crecimiento Personal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!--encabezado -->
     <header>
-        <h1>Crecimiento Personal</h1>
+        <div id="logo">
+            <img src="#enlace a la imagen" alt="Logotipo de Cremimiento Personal" width="553" height="70" />
+            <h1>Crecimiento Personal</h1>
+        </div>
+
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -17,37 +22,54 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </header>   
+    </header>    
+   
+    <div id="contenedorprincipal">
     
-    <!--Sección Bienvenida -->
-    <section id="inicio">
-        <h2>Bienvenido a tu espacio de crecimiento </h2>
-        <p>Descubre herramientas, consejos y productos para potenciar tu desarrollo personal</p>
-    </section>
-    
-    <!--Blog o Recursos -->
-    <section id="blog">
-        <h2>Últimos artículos</h2>
-        <article>
-            <h3>¿Cómo establecer metas efectivas?</h3>
-            <p>Descubre estrategias para fijar objetivos claros y alcanzables</p>
-            <a href="#leermas">Leer más</a>
-        </article>
-        <article>
-            <h3>El poder de la mentalidad positiva</h3>
-            <p>Aprende cómo el pensamiento positivo puede mejorar tu vida</p>
-            <a href="#leermas">Leer más</a>
-        </article>
-    </section>
-    
-    <!--Tienda online (futura integración)-->
-    <section>
-        <h2>Nuestros productos</h2>
-        <p>Próximanente</p>
-    </section>
+    <!-- Barra lateral izquierda-->
+        <aside id="barralateralizquierda">
+            <ul id="menu-barralateral">
+                <li><a href="#metas">Metas y productividad</a></li>
+                <li><a href="#mentalidad">Mentalidad positiva</a></li>
+                <li><a href="#habitos">Hábitos saludables</a></li>
+                <li><a href="#libros">Libros recomendados</a></li>
+                <li><a href="#reflexiones">Reflexiones y motivación</a></li>
+            </ul>
+        </aside>
 
-    <!--Formulario de contacto-->
-    <section id="contacto">
+    <!-- Contenedor contenido-->
+        <main id="contenedorcontenido">
+            <!--Sección Bienvenida -->
+            <section id="inicio">
+                <h2>Bienvenido a tu espacio de crecimiento </h2>
+                <p>Descubre herramientas, consejos y productos para potenciar tu desarrollo personal</p>
+            </section>
+
+            <!--Blog o Recursos -->
+            <section id="blog">
+                <h2>Últimos artículos</h2>
+                <article>
+                    <h3>¿Cómo establecer metas efectivas?</h3>
+                    <p>Descubre estrategias para fijar objetivos claros y alcanzables</p>
+                    <a href="#leermas">Leer más</a>
+                </article>
+                <article>
+                    <h3>El poder de la mentalidad positiva</h3>
+                    <p>Aprende cómo el pensamiento positivo puede mejorar tu vida</p>
+                    <a href="#leermas">Leer más</a>
+                </article>
+                
+            </section>
+            
+            <!--Tienda online (futura integración)-->
+            <section id="tienda">
+                <h2>Nuestros productos</h2>
+                <p>Próximanente</p>
+            </section>
+        </main> 
+    <!-- Formulario Barra lateral derecha -->
+        
+    <aside id="contacto">
         <h2>Contáctanos</h2>
         <form>
             <label for="nombre">Nombre</label>
@@ -59,22 +81,25 @@
             <label for="mensaje">Mensaje</label>
             <textarea  id="mensaje" name="mensaje" required></textarea>
 
+            <div id="checkbox-group">
+                <label>
+                    <input type="checkbox" id="politica" name="politica" required>
+                    Acepto la <a href="#politicarpivacidad">política de privacidad</a> y normas de uso.
+                </label>
+                            
+                <label>
+                    <input type="checkbox" id="informacion">
+                     Acepto recibir información en mi Email
+                </label>
+            </div>
             <button type="submit">Enviar</button>  
-            <label>
-                <input type="checkbox" id="politica" name="politica" required>
-                Acepto la <a href="#politicarpivacidad">política de privacidad</a> y normas de uso.
-            </label>
-            <label>
-                <input type="checkbox" id="informacion" >
-                Acepto recibir información en mi Email
-            </label>
         </form>
-    </section>
+    </aside>
 
-    <!--Pie de página-->
-    <footer>
-        <p>&copy; 2025 Crecimiento Personal - Todos los derechos reservados</p>
-    </footer>
-
+        <!--Pie de página-->
+        <footer>
+            <p id="textofooter">&copy; 2025 Crecimiento Personal - Todos los derechos reservados</p>
+        </footer>
+    
 </body>
 </html>

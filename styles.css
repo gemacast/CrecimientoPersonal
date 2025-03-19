@@ -1,0 +1,267 @@
+/* Fuente importada de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Estilos globales */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* ( Hace que el ancho y alto de los elementos incluyan padding y bordes (evita que crezcan inesperadamente).) */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    background-color: #f8f9fa;
+    color: #333;
+    /*min-height: 100vh;*/
+    
+}
+
+/* Estilos Titulos*/
+header h1 {font-family: 'Playfair Display', serif;  font-size: 2.5rem;}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+    color: #555;
+}
+
+
+/* Estilos del Encabezado */
+#header{min-height: 200px;}
+
+header{
+    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#header {
+    min-height: auto; /* el tamaño se ajustará al contenido en lugar de estar fijo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos del menu header (nav)*/
+nav{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover{
+    background: rgba(255, 255, 255, 0.2); /* Efecto de hover con transparencia */
+    color: #f1c40f;
+}
+
+
+
+/* Estilo general del contenedor principal */
+
+#contenedorprincipal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh; /* (asegura que el contenedor principal ocupe al menos la altura de la pantalla*/
+    
+}
+
+
+
+/* Estilos de la barra lateral izquierda */
+#barralateralizquierda{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 220px;
+    background: #f4f4f4;
+    padding: 20px;
+    /*min-height: 100vh; /* Hace que la barra lateral tenga el alto de la pantalla */
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Evita que la barra se reduzca */
+}
+
+#menu-barralateral {
+    list-style: none;
+    padding: 0;
+}
+
+#menu-barralateral li {
+    margin-bottom: 10px;
+}
+
+#menu-barralateral a{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#menu-barralateral a:hover {
+    background: #007bff;
+    color: white;
+}
+
+
+/* Secciones */
+#contenedorcontenido {
+   flex-grow: 1; /* Ocupa el espacio restante */
+   max-width: 1000px;
+    
+}
+
+#contenedorcontenido section {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los artículos */
+article {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+article a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Barra lateral derecha (Formulario) */
+#contacto {
+    width: 220px;
+    background: #f4f4f4;
+    padding: 20px;
+    min-height: 100vh; /* Asegura que tenga la misma altura que el contenido */
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos */
+}
+
+/* Estilo del formulario */
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contacto input, #contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contacto textarea {
+    resize: none;
+    height: 100px;
+}
+
+#contacto button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contacto button:hover {
+    background: #0056b3;
+}
+
+/* Estilo para los checkboxes */
+#contacto .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#contacto input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+
+/* Pie de pagina */
+
+footer {
+    background: #333;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    min-height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#textofooter{
+    color: #f1f1f1;font-size: 0.9rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
