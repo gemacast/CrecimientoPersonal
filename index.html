@@ -9,24 +9,30 @@
 <body>
     <!--encabezado -->
     <header>
-        <div id="logo">
-            <img src="#enlace a la imagen" alt="Logotipo de Cremimiento Personal" width="553" height="70" />
-            <h1>Crecimiento Personal</h1>
+        <div id="header-container">
+            <!-- Logo a la izquierda -->
+            <div id="logo">
+                <img src="imagenes/logoBlanco.png" alt="Logotipo de Crecimiento Personal">
+            </div>
+    
+            <!-- Contenedor del título y navegación -->
+            <div id="header-content">
+                <h1>Crecimiento Personal</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#tienda">Tienda</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#tienda">Tienda</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>    
+    </header>
    
     <div id="contenedorprincipal">
-    
-    <!-- Barra lateral izquierda-->
+       
+        <!-- Barra lateral izquierda-->
         <aside id="barralateralizquierda">
             <ul id="menu-barralateral">
                 <li><a href="#metas">Metas y productividad</a></li>
@@ -37,12 +43,25 @@
             </ul>
         </aside>
 
-    <!-- Contenedor contenido-->
+        <!-- Contenedor principal-->
         <main id="contenedorcontenido">
             <!--Sección Bienvenida -->
             <section id="inicio">
-                <h2>Bienvenido a tu espacio de crecimiento </h2>
-                <p>Descubre herramientas, consejos y productos para potenciar tu desarrollo personal</p>
+                <h2>¡Transforma tu vida paso a paso! </h2>
+                <p>Bienvenido al lugar donde tus sueños toman acción. Aquí encontrarás inspiración, rutinas prácticas y productos especialmente diseñados para impulsar tu crecimiento personal día a día. Descubre el poder de los pequeños cambios y vive con motivación constante.</p>
+            </section>
+
+            <!-- Rutinas para crecimiento Personal -->
+            <section id="rutinas">
+                <h2>Rutinas para vivir con intención</h2>
+                <p>Sabemos que el crecimiento personal no sucede de la noche a la mañana, ¡pero con nuestras rutinas lograrás avances increíbles! Aquí aprenderás cómo incorporar hábitos positivos y significativos en tu vida, acompañados por productos motivacionales que harán más sencillo y placentero cada paso hacia tu mejor versión.</p>
+                <h3>Rutina de la mañana motivadora</h3>
+                <ul>
+                    <li>Comienza tu día con afirmaciones positivas usando láminas motivacionales.</li>
+                    <li>Usa tu agenda de objetivos personales para definir claramente tus metas del día.</li>
+                    <li>Dedica 10 minutos a escribir en tu diario de gratitud para potenciar tu mentalidad positiva.</li>
+                </ul>
+                <p id="llamada" class="call-to-action">¡Explora más rutinas y encuentra los productos perfectos para acompañarte en tu crecimiento!</p>
             </section>
 
             <!--Blog o Recursos -->
@@ -67,39 +86,39 @@
                 <p>Próximanente</p>
             </section>
         </main> 
-    <!-- Formulario Barra lateral derecha -->
-        
-    <aside id="contacto">
-        <h2>Contáctanos</h2>
-        <form>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <!-- Formulario Barra lateral derecha -->
+        <aside id="contacto">
+            <h2>Contáctanos</h2>
+            <form action="process_form.php" method="POST">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="mensaje">Mensaje</label>
-            <textarea  id="mensaje" name="mensaje" required></textarea>
+                <label for="mensaje">Mensaje</label>
+                <textarea  id="mensaje" name="mensaje" required></textarea>
 
-            <div id="checkbox-group">
-                <label>
-                    <input type="checkbox" id="politica" name="politica" required>
-                    Acepto la <a href="#politicarpivacidad">política de privacidad</a> y normas de uso.
-                </label>
-                            
-                <label>
-                    <input type="checkbox" id="informacion">
-                     Acepto recibir información en mi Email
-                </label>
-            </div>
-            <button type="submit">Enviar</button>  
-        </form>
-    </aside>
+                <div id="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="politica" name="politica" required>
+                        Acepto la <a href="#politicarpivacidad">política de privacidad</a> y normas de uso.
+                    </label>
+                                
+                    <label>
+                        <input type="checkbox" id="informacion">
+                        Acepto recibir información en mi Email
+                    </label>
+                </div>
+                <button type="submit">Enviar</button>  
+            </form>
+        </aside>
+     </div>   
 
         <!--Pie de página-->
         <footer>
             <p id="textofooter">&copy; 2025 Crecimiento Personal - Todos los derechos reservados</p>
         </footer>
-    
+<script src="script.js"></script>    
 </body>
 </html>

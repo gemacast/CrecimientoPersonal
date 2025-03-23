@@ -10,13 +10,11 @@
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    /*justify-content: space-between;*/
-    background-color: #f8f9fa;
-    color: #333;
+    /*display: flex;
+    flex-direction: column;*/
     /*min-height: 100vh;*/
-    
+    color: #333;
+    background-color: #f8f9fa;
 }
 
 /* Estilos Titulos*/
@@ -34,6 +32,7 @@ h3 {
     font-family: 'Playfair Display', serif; 
     font-size: 1.5rem;
     color: #333;
+    margin-top:20px;
 }
 
 p {
@@ -43,80 +42,110 @@ p {
 }
 
 
-/* Estilos del Encabezado */
-#header{min-height: 200px;}
-
-header{
-    background: linear-gradient(135deg,#6a11cb,#2575fc);
-    color: #fff;
-    padding: 20px 10px;
-    text-align: center;
+/* Estilos generales del encabezado */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#header {
-    min-height: auto; /* el tamaño se ajustará al contenido en lugar de estar fijo */
+/* Contenedor principal del header */
+#header-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    gap: 20px; /* Espaciado entre el logo y el contenido */
 }
 
-/* Estilos del menu header (nav)*/
-nav{
+/* Logo alineado a la izquierda */
+#logo {
+    flex: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#logo img {
+    width: 120px; /* Ajustamos el tamaño */
+    height: auto;
+}
+
+/* Contenedor del título y la navegación */
+#header-content {
+    flex: 1;
+    text-align: center;
+}
+
+/* Título centrado */
+#header-content h1 {
+    font-size: 2.4rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px; /* Separación del nav */
+}
+
+/* Navegación centrada debajo del título */
+nav {
     display: flex;
     justify-content: center;
-    padding-top: 10px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px; /* Más separación entre los elementos */
+    padding: 0;
+    
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: white;
     font-weight: 600;
-    padding: 10px 15px;
+    font-size: 1.1rem; /* Ajustamos el tamaño del texto */
+    padding: 8px 15px;
     border-radius: 5px;
+    
 }
 
-nav ul li a:hover{
-    background: rgba(255, 255, 255, 0.2); /* Efecto de hover con transparencia */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
     color: #f1c40f;
 }
 
 
 
+
+
+
 /* Estilo general del contenedor principal */
 
-#contenedorprincipal{
+*#contenedorprincipal {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 100vh; /* (asegura que el contenedor principal ocupe al menos la altura de la pantalla*/
-    
+    flex: 1;
+    max-width: 1800px;
+    margin: 20px auto;
+    padding: 20px;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 
-
 /* Estilos de la barra lateral izquierda */
-#barralateralizquierda{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+#barralateralizquierda {
     width: 220px;
     background: #f4f4f4;
     padding: 20px;
-    /*min-height: 100vh; /* Hace que la barra lateral tenga el alto de la pantalla */
+    flex-shrink: 0;
+    border-radius: 8px;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0; /* Evita que la barra se reduzca */
 }
 
 #menu-barralateral {
@@ -146,9 +175,12 @@ nav ul li a:hover{
 
 /* Secciones */
 #contenedorcontenido {
-   flex-grow: 1; /* Ocupa el espacio restante */
-   max-width: 1000px;
-    
+    flex-grow: 1;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 600px; /* Evita que el contenido se achique demasiado */
 }
 
 #contenedorcontenido section {
@@ -157,6 +189,44 @@ nav ul li a:hover{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+#rutinas {
+    display: flex;
+    flex-direction: column;
+}
+
+#rutinas ul{
+    margin-top: 10px;
+    
+}
+
+#rutinas ul li{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-left: 20px;
+
+   /* line-height: 1.6;*/
+}
+
+#rutinas p.call-to-action{
+    
+    margin-top: 20px;
+    font-size: 1.2rem;
+    background: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+
+    
+}
+
+
+
+
+
 
 /* Estilos para los artículos */
 article {
@@ -184,12 +254,9 @@ article a:hover {
     width: 220px;
     background: #f4f4f4;
     padding: 20px;
-    min-height: 100vh; /* Asegura que tenga la misma altura que el contenido */
+    flex-shrink: 0; /* Evita que se reduzca más de su tamaño */
+    border-radius: 8px;
     box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espacio entre los elementos */
 }
 
 /* Estilo del formulario */
@@ -245,7 +312,8 @@ article a:hover {
 
 /* Pie de pagina */
 
-footer {
+/*footer {
+    width: 100%;
     background: #333;
     color: #f1f1f1;
     text-align: center;
@@ -255,7 +323,18 @@ footer {
     margin-top: auto;
     min-height: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}*/
+footer {
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    clear: both;
 }
+
 #textofooter{
     color: #f1f1f1;font-size: 0.9rem;
     text-align: center;
